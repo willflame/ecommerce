@@ -61,3 +61,9 @@ Exemplos:
 npx nx affected:test
 npx nx affected:graph
 ```
+
+### Documentações adicionais
+
+[Arquitetura do projeto](./docs/project-architecture.md)
+[Configurações recomendadas](./docs/configuratons-vscode.md)
+[Extensões recomendadas para Visual Studio Code](./docs/extensions.md)
