@@ -2,8 +2,6 @@
 
 Projeto esta sendo desenvolvido durante a Mentoria Angular Pro 2.0, voltado para estudo de arquitetura e boas praticas em uma aplicação Angular com NX.
 
-
-
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ **Este workspace foi gerado pelo [Build System NX](https://nx.dev)** ✨
