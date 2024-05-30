@@ -5,8 +5,6 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { Product, ProductSearchService } from '@ecommerce/product-data-access';
 import {
   Observable,
   debounceTime,
@@ -14,6 +12,9 @@ import {
   filter,
   switchMap,
 } from 'rxjs';
+
+// eslint-disable-next-line @nx/enforce-module-boundaries
+import { Product, ProductSearchService } from '@ecommerce/product-data-access';
 
 @Component({
   selector: 'ecommerce-product-search',
@@ -36,9 +37,9 @@ export class ProductSearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.products$ = this.control.valueChanges.pipe(
-      debounceTime(300),
+      debounceTime(500),
       distinctUntilChanged(),
-      filter((text) => text?.length > 2),
+      filter((text) => text?.length > 0),
       switchMap((text) => this._productSearchService.searchByName(text))
     );
   }
