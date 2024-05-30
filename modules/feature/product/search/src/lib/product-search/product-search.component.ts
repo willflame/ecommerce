@@ -13,7 +13,6 @@ import {
   switchMap,
 } from 'rxjs';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import { Product, ProductSearchService } from '@ecommerce/product-data-access';
 
 @Component({

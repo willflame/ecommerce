@@ -8,7 +8,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { of } from 'rxjs';
 
-// eslint-disable-next-line @nx/enforce-module-boundaries
 import {
   ProductSearchService,
   mockProducts,
