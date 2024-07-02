@@ -20,4 +20,8 @@ export class ProductSearchService {
       },
     });
   }
+
+  getById(id: string): Observable<Product> {
+    return this._httpClient.get<Product>(`${this.apiUrl}/products/${id}`);
+  }
 }

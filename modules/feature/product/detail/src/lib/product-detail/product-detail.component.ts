@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Product, ProductSearchService } from '@ecommerce/product-data-access';
+import { Observable, switchMap } from 'rxjs';
 import { getParams } from './get-params';
+// import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'ecommerce-product-detail',
@@ -11,10 +13,15 @@ import { getParams } from './get-params';
   styleUrl: './product-detail.component.scss',
 })
 export class ProductDetailComponent {
-  // @Input() id!: string;
-  id$ = getParams();
+  private productSearchService = inject(ProductSearchService);
 
-  private activatedRoute = inject(ActivatedRoute);
+  // @Input() id!: string;
+  // id$ = = getParams();
+  product$: Observable<Product> = getParams().pipe(
+    switchMap((id: string) => this.productSearchService.getById(id))
+  );
+
+  // private activatedRoute = inject(ActivatedRoute);
   // constructor(private activatedRoute: ActivatedRoute) {}
 
   // ngOnInit(): void {
