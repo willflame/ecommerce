@@ -7,8 +7,8 @@ import {
   withPreloading,
 } from '@angular/router';
 
-import { appRoutes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { appRoutes } from './app.routes';
 import { httpErrorsInterceptor } from './interceptors/http-errors/http-errors.interceptor';
 
 export const appConfig: ApplicationConfig = {
